@@ -4,7 +4,7 @@ These materials are for self-study and will not be graded.
 
 ## 1. Prerequisites
 
-**Start here:** go through the [Python Readiness Checklist](docs/python-readiness-checklist.md) to see which Python topics you already know and which you need to study. The checklist links each topic to the notebook that covers it, so you can skip what you already know and focus on the gaps.
+Before starting the notebooks below, go through the [Python Readiness Checklist](docs/python-readiness-checklist.md). It shows which Python topics you already know and which you still need to study, and points to the notebook that covers each one.
 
 Hyperskill projects include "Prerequisites" sections that list relevant topics. Use these as reference — if you encounter unfamiliar concepts, review those specific topics as needed.
 

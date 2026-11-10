@@ -1,64 +1,61 @@
 # Python Readiness Checklist
 
-This checklist lists the Python topics you need to start the AI Engineering cohort comfortably. Throughout the course you will write Python that builds prompts, sends requests to model APIs, and processes JSON responses, often many requests at once. Every item below shows up in that work.
+This checklist covers the Python you need to start the AI Engineering cohort comfortably. In the course you'll write code that calls model APIs and works with the JSON they return, often sending many requests at once. Every topic below comes up in that code.
 
-It is a self-assessment, not a test. Nothing here is graded, and nobody checks your answers. Use it to see what you already know and what to study before the cohort starts, so you don't have to guess.
+Nothing here is graded and nobody checks your answers. Use the list to find out what you already know and what to study before the cohort starts.
 
 ## How to use it
 
-1. **Go through each item honestly.** Under each topic is a short description of what "knowing it" means. Tick the box only if you could do that without looking it up, or with only a quick check of the syntax.
-2. **Mark what you're unsure about.** Anything you can't tick is what you should study. If you can explain a topic but haven't written the code yourself, leave it unticked.
-3. **Study the gaps.** Each section links to the notebook that covers its topics. Work through the parts that match your unticked items. If you already know a section well, you can skip it.
-4. **Come back to it.** Go through the checklist again before the cohort starts. Aim to have every box ticked by day one.
+Each topic has a short task underneath it.
 
-To keep track of your progress, copy this file somewhere you can edit it (a fork of this repo, a local clone, or your notes app) and replace `[ ]` with `[x]` as you go.
+1. Read each task and tick the box if you could do it without looking anything up, apart from a quick syntax check. If you understand the idea but have never written the code yourself, leave the box empty.
+2. For every empty box, work through the matching part of the notebook linked at the top of that section. You can skip any section where all the boxes are ticked.
+3. Go through the list again before the cohort starts. By the first day, every box should be ticked.
 
----
+To track your progress, copy this file somewhere you can edit it (a fork of this repo, a local clone, or your notes) and change `[ ]` to `[x]` as you go.
 
 ## Part 1: Python for working with data and APIs
 
-Covered in the [Intro to Python notebook](https://github.com/hyperskill-content/Python_intro/blob/main/notebooks/Python_Intro_Preliminary.ipynb).
+The topics in this part are covered in the [Intro to Python notebook](https://github.com/hyperskill-content/Python_intro/blob/main/notebooks/Python_Intro_Preliminary.ipynb).
 
-- [ ] **String formatting with f-strings for prompt construction**
-  You can build a multi-line prompt from variables, using expressions and format specifiers inside `{}`.
-- [ ] **Dictionaries and lists that map to JSON structures**
-  You can predict how a JSON object or array turns into Python `dict`s and `list`s, and convert between them with the `json` module.
-- [ ] **Nested data structures for API payloads**
-  You can build a payload such as a list of message dicts, each with its own fields, and read or update values several levels deep.
-- [ ] **Functions with type hints and default parameters**
-  You can write a function with annotated parameters and a return type, and call it with keyword arguments that override the defaults.
-- [ ] **List comprehensions and filtering**
-  You can turn a loop that transforms or filters items into a single comprehension, and you know when a plain loop is easier to read.
-- [ ] **Control flow and error handling**
-  You can use `if`/`elif`/`else`, `for`, and `while`, and you can catch specific exceptions with `try`/`except`/`else`/`finally` instead of a bare `except`.
-- [ ] **Lambda functions and sorting**
-  You can sort a list of dicts by one or more keys with `sorted(..., key=lambda ...)`, including in reverse order.
-- [ ] **Working with API response structures**
-  Given an unfamiliar JSON response, you can find the field you need and extract it safely (for example with `.get()`), even when some keys may be missing.
+- [ ] String formatting with f-strings for prompt construction\
+  Build a multi-line prompt from variables, with expressions and format specifiers inside `{}`.
+- [ ] Dictionaries and lists that map to JSON structures\
+  Predict which Python `dict`s and `list`s a given JSON document turns into, and convert between the two with the `json` module.
+- [ ] Nested data structures for API payloads\
+  Create a payload such as a list of message dicts with several fields each, then read and update values a few levels deep.
+- [ ] Functions with type hints and default parameters\
+  Write a function with annotated parameters and a return type, then call it with keyword arguments that override its defaults.
+- [ ] List comprehensions and filtering\
+  Rewrite a loop that filters or transforms items as a comprehension, and tell when the plain loop is easier to read.
+- [ ] Control flow and error handling\
+  Use `if`/`elif`/`else`, `for`, and `while`, and catch specific exceptions with `try`/`except`/`else`/`finally` rather than a bare `except`.
+- [ ] Lambda functions and sorting\
+  Sort a list of dicts by one or more keys with `sorted(..., key=lambda ...)`, in ascending and descending order.
+- [ ] Working with API response structures\
+  Take an unfamiliar JSON response, find the field you need, and extract it safely (for example with `.get()`) when some keys may be missing.
 
 ## Part 2: HTTP requests and async
 
-Covered in the [HTTP and Async notebook](https://github.com/hyperskill-content/Python_intro/blob/main/notebooks/HTTP_async.ipynb).
+The topics in this part are covered in the [HTTP and Async notebook](https://github.com/hyperskill-content/Python_intro/blob/main/notebooks/HTTP_async.ipynb).
 
-- [ ] **HTTP requests with the `requests` library**
-  You can install `requests`, make a request to a public API, and inspect what came back.
-- [ ] **GET/POST/PUT/DELETE methods**
-  You know what each method is for and can make each one with `requests`.
-- [ ] **Query parameters and request bodies**
-  You can pass query parameters with `params=`, send a JSON body with `json=`, and add headers such as an API key with `headers=`.
-- [ ] **Response handling (status codes, JSON parsing, headers)**
-  You can check `status_code` or call `raise_for_status()`, parse the body with `.json()`, and read response headers.
-- [ ] **Sessions and context managers**
-  You can reuse a `requests.Session` for several calls and explain what the `with` statement does for you.
-- [ ] **Async programming with async/await**
-  You can write and run an `async def` function with `asyncio.run()`, and explain why `await` is needed and where you're allowed to use it.
-- [ ] **`aiohttp` for concurrent requests**
-  You can make HTTP requests with `aiohttp.ClientSession` inside an async function.
-- [ ] **`asyncio.gather()` for parallel execution**
-  You can start many requests at once with `asyncio.gather()`, collect their results in order, and decide what should happen when one of them fails.
-- [ ] **Rate limiting and error handling in async contexts**
-  You can cap the number of requests running at the same time (for example with `asyncio.Semaphore`) and retry failed requests with a delay between attempts.
+- [ ] HTTP requests with the `requests` library\
+  Install `requests`, call a public API, and inspect the response object.
+- [ ] GET/POST/PUT/DELETE methods\
+  Explain what each method is for and send each one with `requests`.
+- [ ] Query parameters and request bodies\
+  Pass query parameters with `params=`, send a JSON body with `json=`, and set headers such as an API key with `headers=`.
+- [ ] Response handling (status codes, JSON parsing, headers)\
+  Check `status_code` or call `raise_for_status()`, parse the body with `.json()`, and read the response headers.
+- [ ] Sessions and context managers\
+  Reuse one `requests.Session` across several calls, and explain what a `with` block takes care of.
+- [ ] Async programming with async/await\
+  Write an `async def` function, run it with `asyncio.run()`, and explain why `await` is needed and where it is allowed.
+- [ ] `aiohttp` for concurrent requests\
+  Make HTTP requests with `aiohttp.ClientSession` inside an async function.
+- [ ] `asyncio.gather()` for parallel execution\
+  Start many requests at once with `asyncio.gather()`, collect the results in order, and decide what happens when one of them fails.
+- [ ] Rate limiting and error handling in async contexts\
+  Limit how many requests run at the same time (for example with `asyncio.Semaphore`) and retry failed requests after a delay.
 
----
-
-**All boxes ticked?** You're ready on the Python side. Continue with the [rest of the pre-study materials](../README.md).
+When every box is ticked, continue with the [rest of the pre-study materials](../README.md).
